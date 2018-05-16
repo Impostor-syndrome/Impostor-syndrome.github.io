@@ -1,1 +1,0 @@
-# Impostor-syndrome.github.io
