@@ -10264,7 +10264,7 @@ var _default = {
     return {
       name: "Ketil Braun Larsen",
       category: "Profile",
-      image: "https://media-exp1.licdn.com/dms/image/C5103AQGohkqTC9j9Zw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=oACRgKWWupN3XzHNmmmQIik6JUAVRY_XiFRJmIc_D8E",
+      image: "0.jpg",
       email: "contact@ketil.dk",
       CatchPhrase: "Security, Infrastructure, people and projects.",
       LinkedIn: "www.linkedin.com/in/ketil-dot-dk",
