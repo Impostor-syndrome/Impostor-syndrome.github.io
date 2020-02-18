@@ -10268,7 +10268,7 @@ var _default = {
       email: "contact@ketil.dk",
       CatchPhrase: "Security, Infrastructure, people and projects.",
       LinkedIn: "www.linkedin.com/in/ketil-dot-dk",
-      desc: "Are you looking for a resourceful, versatile and happy security guy who likes to get his hands dirty?  I just might be the guy you are looking for, why not check out my linkedin profile"
+      desc: "Are you looking for a resourceful, versatile and happy security guy who likes to get his hands dirty?  Then I just might be the guy you are looking for, so why not check out my linkedin profile below."
     };
   }
 };
