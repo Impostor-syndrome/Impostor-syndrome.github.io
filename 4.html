@@ -1281,7 +1281,7 @@ with <code>role</code> when assigning privileges.</p>
 <tr>
 <td><code>view</code></td>
 <td><code>string</code></td>
-<td>see <a href="https://api.eu.mist.com/api/v1/docs/Org#Custom-Roles">supported UI views</a></td>
+<td>see <a href="https://www.ketil.dk/4.html#Custom-Roles">supported UI views</a></td>
 </tr>
 <tr>
 <td><code>site_id</code></td>
@@ -1345,7 +1345,7 @@ with <code>role</code> when assigning privileges.</p>
 <tr>
 <td><code>view</code></td>
 <td><code>string</code></td>
-<td>optional, see <a href="https://api.eu.mist.com/api/v1/docs/Org#Custom-Roles">supported UI views</a></td>
+<td>optional, see <a href="https://www.ketil.dk/4.html#Custom-Roles">supported UI views</a></td>
 </tr>
 <tr>
 <td><code>site_id</code></td>
@@ -1423,7 +1423,7 @@ with <code>role</code> when assigning privileges.</p>
 <tr>
 <td><code>view</code></td>
 <td><code>string</code></td>
-<td>optional, see <a href="https://api.eu.mist.com/api/v1/docs/Org#Custom-Roles">supported UI views</a></td>
+<td>optional, see <a href="https://www.ketil.dk/4.html#Custom-Roles">supported UI views</a></td>
 </tr>
 <tr>
 <td><code>site_id</code></td>
@@ -2739,7 +2739,7 @@ copied, and therefore, the copied template will not be applied to any site/siteg
 <tr>
 <td><code>limit_ssh_access</code></td>
 <td><code>boolean</code></td>
-<td>whether to allow certain SSH keys to SSH into the AP (see <a href="https://api.eu.mist.com/api/v1/docs/Site#site-setting">Site:Setting</a>), default is false</td>
+<td>whether to allow certain SSH keys to SSH into the AP (see <a href="https://www.ketil.dk/3.html#site-setting">Site:Setting</a>), default is false</td>
 </tr>
 <tr>
 <td><code>fips_zeroize_password</code></td>
@@ -3576,7 +3576,7 @@ that we created.  Those objects will also be marked as partner-created. </p>
 <pre><code>/api/v1/orgs/:org_id/webhooks
 </code></pre>
 <h3 id="example_2">Example</h3>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#webhooks">Site:Webhooks</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#webhooks">Site:Webhooks</a> for schema</p>
 <p><strong>N.B.</strong> For org webhooks, only <em>device-events/alarms/audits/client-join/client-sessions/device-updowns/mxedge-events</em>
 Infrastructure topics are supported.</p>
 <h1 id="installer-apis">Installer APIs</h1>
@@ -3716,7 +3716,7 @@ The Device replaced will become unassigned.</p>
 <pre><code>DELETE /api/v1/installer/orgs/:org_id/devices/:mac
 </code></pre>
 <h2 id="claim-devices">Claim Devices</h2>
-<p>This mirrors<code>POST /api/v1/orgs/:org_id/inventory</code> (see <a href="https://api.eu.mist.com/api/v1/docs/Org#add-inventory-to-an-org">Inventory API</a>)</p>
+<p>This mirrors<code>POST /api/v1/orgs/:org_id/inventory</code> (see <a href="https://www.ketil.dk/4.html#add-inventory-to-an-org">Inventory API</a>)</p>
 <pre><code>POST /api/v1/installer/orgs/:org_id/devices
 </code></pre>
 <h3 id="request_28">Request</h3>
@@ -3934,7 +3934,7 @@ DELETE /api/v1/installer/orgs/:org_id/devices/:mac/image3
 </code></pre>
 <h1 id="rf-template">RF Template</h1>
 <p>RF Templates are designed to make Radio Configs more consistent across Sites - by creating a RF Templates with desired
-settings and apply it to <a href="https://api.eu.mist.com/api/v1/docs/Org#sites">Sites</a>. AP/Device-level overwrite can still be done.</p>
+settings and apply it to <a href="https://www.ketil.dk/4.html#sites">Sites</a>. AP/Device-level overwrite can still be done.</p>
 <p>NOTE: country_code, if specified, will take precedence over one defined in the Site</p>
 <h2 id="get-all-create-rf-templates">Get All Create RF Templates</h2>
 <pre><code>GET /api/v1/orgs/:org_id/rftemplates
@@ -4044,7 +4044,7 @@ DELETE /api/v1/orgs/:org_id/rftemplates/:rftemplate_id
 </table>
 <h1 id="network-template">Network Template</h1>
 <p>Network template is intended to be applied to a Site. It works like a blueprint of the network of the site.</p>
-<p>All Site Settings can go into Network Templates. See <a href="https://api.eu.mist.com/api/v1/docs/Site#site-setting">Site:Site Setting</a> for schema</p>
+<p>All Site Settings can go into Network Templates. See <a href="https://www.ketil.dk/3.html#site-setting">Site:Site Setting</a> for schema</p>
 <p>Moreover, this can further be overwritten by individual Site Setting</p>
 <h2 id="create-network-template">Create Network Template</h2>
 <pre><code>POST /api/v1/orgs/:org_id/networktemplates
@@ -4502,7 +4502,7 @@ to configure devices for different kind of scenarios.</p>
 <p>The precedence goes from most specific to least specific</p>
 <p>Device &gt; Device Profile &gt; RFTemplate (for AP only) &gt; DeviceType-specific Template &gt; Site Template &gt; Site Setting</p>
 <h1 id="evpn">EVPN</h1>
-<p>In some scenarios, you may want to have EVPN topologies across sites. For usage, seesee <a href="https://api.eu.mist.com/api/v1/docs/Site#evpn">Site:EVPN</a></p>
+<p>In some scenarios, you may want to have EVPN topologies across sites. For usage, seesee <a href="https://www.ketil.dk/3.html#evpn">Site:EVPN</a></p>
 <pre><code>GET /api/v1/orgs/:org_id/evpn_topologies
 POST /api/v1/orgs/:org_id/evpn_topologies
 
@@ -5413,7 +5413,7 @@ can be forwarded without fragmentation. The default value is 1514.</td>
 </code></pre>
 <h2 id="device-replacement">Device Replacement</h2>
 <p>It’s a common request we get from the customers. When a AP HW has problem and need a replacement, they would want to
-copy the existing attributes (<a href="https://api.eu.mist.com/api/v1/docs/Site#device-config">Device Config</a>) of this old AP to the new one. It can be done by
+copy the existing attributes (<a href="https://www.ketil.dk/3.html#device-config">Device Config</a>) of this old AP to the new one. It can be done by
 providing the MAC of a device that’s currently in the inventory but not assigned. The Device replaced will become
 unassigned.</p>
 <pre><code>POST /api/v1/orgs/:org_id/inventory/replace
@@ -5588,7 +5588,7 @@ DELETE /api/v1/orgs/:org_id/templates/:template_id
 <pre><code>/api/v1/orgs/:org_id/wlans
 </code></pre>
 <h3 id="example_8">Example</h3>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wlan">Site:Wlan</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#wlan">Site:Wlan</a> for schema</p>
 <pre><code>{
     "name": "whatever",
     "template_id": "867860f2-dd82-3677-54a5-4d6b139c96ca"
@@ -5599,49 +5599,49 @@ DELETE /api/v1/orgs/:org_id/templates/:template_id
 <p>Upload background image for Portal</p>
 <pre><code>POST /api/v1/orgs/:org_id/wlans/:wlan_id/portal_image
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wlan-portal-image-upload">Site:Wlan Portal Image Upload</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#wlan-portal-image-upload">Site:Wlan Portal Image Upload</a> for schema</p>
 <h2 id="wlan-portal-image-delete">Wlan Portal Image Delete</h2>
 <p>Delete background image for Portal</p>
 <pre><code>DELETE /api/v1/orgs/:org_id/wlans/:wlan_id/portal_image
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wlan-portal-image-delete">Site:Wlan Portal Image Delete</a></p>
+<p>see <a href="https://www.ketil.dk/3.html#wlan-portal-image-delete">Site:Wlan Portal Image Delete</a></p>
 <h1 id="org-wxlan-tunnel">Org Wxlan Tunnel</h1>
 <pre><code>/api/v1/orgs/:org_id/wxtunnels
 </code></pre>
-<p>There can be Management Tunnels (which can be applied to a sitegroup, see <a href="https://api.eu.mist.com/api/v1/docs/Org#org-setting">Org:Setting</a>) as well as
+<p>There can be Management Tunnels (which can be applied to a sitegroup, see <a href="https://www.ketil.dk/4.html#org-setting">Org:Setting</a>) as well as
 Data Tunnels, which can only be applied to Org Wlans in a Template. Moreover, the WxlanTunnel inside a template can only
 be used by Org Wlans in the same template</p>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wxlan-tunnels">Site:Wlan Tunnels</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#wxlan-tunnels">Site:Wlan Tunnels</a> for schema</p>
 <h1 id="org-wxlan-tags">Org Wxlan Tags</h1>
 <p>Wxlan Tags can be defined inside a template. When used, it can be deployed to</p>
 <pre><code>/api/v1/orgs/:org_id/wxtags
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wxlan-tags">Site:Wlan Tags</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#wxlan-tags">Site:Wlan Tags</a> for schema</p>
 <h1 id="org-wxlan-rules">Org Wxlan Rules</h1>
 <p>Wxlan Rules can be applied to template. WxlanRule defined inside a template will operate with the scope of specified
 template.</p>
 <pre><code>/api/v1/orgs/:org_id/wxrules
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#wxlan-rules">Site:Wlan Rules</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#wxlan-rules">Site:Wlan Rules</a> for schema</p>
 <h1 id="org-asset-filters">Org Asset Filters</h1>
 <pre><code>/api/v1/orgs/:org_id/assetfilters
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#asset-filters">Site:Asset Filters</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#asset-filters">Site:Asset Filters</a> for schema</p>
 <h1 id="org-asset">Org Asset</h1>
 <pre><code>/api/v1/orgs/:org_id/asset
 /api/v1/orgs/:org_id/asset/:asset_id
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#assets">Site:Asset</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#assets">Site:Asset</a> for schema</p>
 <h2 id="org-import-assets">Org Import Assets</h2>
 <pre><code>POST /api/v1/orgs/:org_id/assets/import
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#assets">Site:Asset</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#assets">Site:Asset</a> for schema</p>
 <h2 id="org-assets-status">Org Assets Status</h2>
 <pre><code>GET /api/v1/orgs/:org_id/stats/assets
 GET /api/vi/orgs/:org_id/stats/assets/:asset_id
 </code></pre>
 <h3 id="response_48">Response</h3>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#get-asset-stats">Site:Asset:Stats</a> for schema</p>
+<p>see <a href="https://www.ketil.dk/3.html#get-asset-stats">Site:Asset:Stats</a> for schema</p>
 <h2 id="org-assets-search">Org Assets Search</h2>
 <pre><code>GET /api/v1/orgs/:org_id/stats/assets/search
 GET /api/v1/orgs/:org_id/stats/assets/search?mac='fbc721cc3022'
@@ -5775,7 +5775,7 @@ DELETE /api/v1/orgs/:org_id/deviceprofiles/:deviceprofile_id
     }
 }
 </code></pre>
-<p>NOTE: see <a href="https://api.eu.mist.com/api/v1/docs/Site#device-config">Device Config</a></p>
+<p>NOTE: see <a href="https://www.ketil.dk/3.html#device-config">Device Config</a></p>
 <h2 id="assignunassign-device-profile-tofrom-devices">Assign/Unassign Device Profile to/from Devices</h2>
 <pre><code>POST /api/v1/orgs/:org_id/deviceprofiles/:deviceprofile_id/assign
 POST /api/v1/orgs/:org_id/deviceprofiles/:deviceprofile_id/unassign
@@ -6409,7 +6409,7 @@ GET /api/v1/orgs/:org_id/wired_clients/events/search?mac=112233445566
 <tr>
 <td><code>type</code></td>
 <td><code>string</code></td>
-<td><a href="https://api.eu.mist.com/api/v1/docs/Org#Supported-Events-Type">See Supported Events Type</a> (E.g. CLIENT_DNS_OK)</td>
+<td><a href="https://www.ketil.dk/4.html#Supported-Events-Type">See Supported Events Type</a> (E.g. CLIENT_DNS_OK)</td>
 </tr>
 </tbody>
 </table>
@@ -7018,7 +7018,7 @@ GET /api/v1/orgs/:org_id/wired_clients/events/search?mac=112233445566
 <tr>
 <td><code>role_attr_extraction</code></td>
 <td><code>string</code></td>
-<td>optional, user defined role parsing scheme. <a href="https://api.eu.mist.com/api/v1/docs/Org#Supported-Role-Parsing-Schemes">See Supported Role Parsing Schemes</a></td>
+<td>optional, user defined role parsing scheme. <a href="https://www.ketil.dk/4.html#Supported-Role-Parsing-Schemes">See Supported Role Parsing Schemes</a></td>
 </tr>
 <tr>
 <td><code>custom_logout_url</code></td>
@@ -7153,7 +7153,7 @@ from SP-initiated SLO process)</td>
 <tr>
 <td><code>view</code></td>
 <td><code>string</code></td>
-<td>optional, see <a href="https://api.eu.mist.com/api/v1/docs/Org#Custom-Roles">supported UI views</a></td>
+<td>optional, see <a href="https://www.ketil.dk/4.html#Custom-Roles">supported UI views</a></td>
 </tr>
 </tbody>
 </table>
@@ -7530,7 +7530,7 @@ from SP-initiated SLO process)</td>
 <tr>
 <td><code>type</code></td>
 <td><code>string</code></td>
-<td><a href="https://api.eu.mist.com/api/v1/docs/Org#Supported-Events-Type">See Supported Events Type</a> (E.g. CLIENT_DNS_OK)</td>
+<td><a href="https://www.ketil.dk/4.html#Supported-Events-Type">See Supported Events Type</a> (E.g. CLIENT_DNS_OK)</td>
 </tr>
 </tbody>
 </table>
@@ -8555,17 +8555,17 @@ from SP-initiated SLO process)</td>
 <h2 id="search-switch-gateway-ports">Search Switch / Gateway Ports</h2>
 <pre><code>GET /api/v1/orgs/:org_id/stats/ports/search
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#search-switch-gateway-ports">Site:Search Switch / Gateway Ports</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#search-switch-gateway-ports">Site:Search Switch / Gateway Ports</a> for API request &amp; response details.</p>
 <h2 id="count-by-distinct-attributes-of-switch-ports">Count by Distinct Attributes of Switch Ports</h2>
 <pre><code>GET /api/v1/orgs/:org_id/stats/switch_ports/count
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#count-by-distinct-attributes-of-switch-ports">Site:Count by Distinct Attributes of Switch Ports</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#count-by-distinct-attributes-of-switch-ports">Site:Count by Distinct Attributes of Switch Ports</a> for API request &amp; response details.</p>
 <h1 id="security-policy">Security Policy</h1>
 <h2 id="overview">Overview</h2>
 <p>Security Policy is designed to audit / catch discripancies between “what’s intended to be running” versus “what’s
 actually running” in a network. Many big organizations have separated Security and IT team (for good reasons). Each site
 can be assigned a security policy. Whenever an AP is provisioned, the configuration will be checked against the security
-policy. Any violations will be flagged in  <a href="https://api.eu.mist.com/api/v1/docs/Site#search-device-config-history">Device Config History</a> where you can
+policy. Any violations will be flagged in  <a href="https://www.ketil.dk/3.html#search-device-config-history">Device Config History</a> where you can
 search for the when and where the violation occurs.</p>
 <h3 id="base-uri_6">Base URI</h3>
 <pre><code>/api/v1/orgs/:org_id/secpolicies
@@ -8781,7 +8781,7 @@ Alarm Template), or to the whole org.</p>
 </tbody>
 </table>
 <p>Note: Rest of the fields are same as defined in the API
-request <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a>.</p>
+request <a href="https://www.ketil.dk/4.html#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a>.</p>
 <h2 id="list-all-alarm-templates">List all Alarm Templates</h2>
 <pre><code>GET /api/v1/orgs/:org_id/alarmtemplates
 </code></pre>
@@ -8836,12 +8836,12 @@ request <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_3">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a></p>
 <h2 id="update-an-alarm-template">Update an Alarm Template</h2>
 <pre><code>PUT /api/v1/orgs/:org_id/alarmtemplates/:alarmtemplate_id
 </code></pre>
 <h4 id="body_4">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">Org:Alarm Template:Create Alarm Template:Body</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#create-alarm-template">Org:Alarm Template:Create Alarm Template:Body</a></p>
 <h4 id="parameters_31">Parameters</h4>
 <table>
 <thead>
@@ -8868,7 +8868,7 @@ request <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_5">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#create-alarm-template">Org:Alarm Template:Create Alarm Template:Response:Body</a></p>
 <h2 id="delete-an-alarm-template">Delete an Alarm Template</h2>
 <pre><code>DELETE /api/v1/orgs/:org_id/alarmtemplates/:alarmtemplate_id
 </code></pre>
@@ -8971,7 +8971,7 @@ recieve in the alarm webhook output.</p>
 <tr>
 <td><code>fields</code></td>
 <td><code>list</code></td>
-<td>(optional)List of fields available in an alarm details payload (in REST APIs &amp; Webhooks); e.g. <code>aps</code>, <code>switches</code>, <code>gateways</code>, <code>hostnames</code>, <code>ssids</code>, <code>bssids</code> etc; see <a href="https://api.eu.mist.com/api/v1/docs/Site#additional-information">Site:Get Alarms:Additional Information</a> for more details</td>
+<td>(optional)List of fields available in an alarm details payload (in REST APIs &amp; Webhooks); e.g. <code>aps</code>, <code>switches</code>, <code>gateways</code>, <code>hostnames</code>, <code>ssids</code>, <code>bssids</code> etc; see <a href="https://www.ketil.dk/3.html#additional-information">Site:Get Alarms:Additional Information</a> for more details</td>
 </tr>
 </tbody>
 </table>
@@ -9077,42 +9077,42 @@ alarms will be suppressed for all the sites under those site groups)</td>
 <p>Acknowledge an alarm within an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/:alarm_id/ack
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#ack-an-alarm">Site:Ack An alarm</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#ack-an-alarm">Site:Ack An alarm</a> for API request &amp; response details.</p>
 <h2 id="unack-an-alarm">Unack An alarm</h2>
 <p>Unacknowledge an alarm within an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/:alarm_id/unack
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#unack-an-alarm">Site:Unack An alarm</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#unack-an-alarm">Site:Unack An alarm</a> for API request &amp; response details.</p>
 <h2 id="ack-multiple-alarms">Ack multiple alarms</h2>
 <p>Acknowledge multiple alarms at once within an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/ack
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#ack-multiple-alarms">Site:Ack mutiple alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#ack-multiple-alarms">Site:Ack mutiple alarms</a> for API request &amp; response details.</p>
 <h2 id="unack-multiple-alarms">UnAck multiple alarms</h2>
 <p>Unacknowledge multiple alarms at once within an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/unack
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#unack-multiple-alarms">Site:UnAck mutiple alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#unack-multiple-alarms">Site:UnAck mutiple alarms</a> for API request &amp; response details.</p>
 <h2 id="ack-all-alarms">Ack all alarms</h2>
 <p>Acknowledge all the alarms of an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/ack_all
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#ack-all-alarms">Site:Ack all alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#ack-all-alarms">Site:Ack all alarms</a> for API request &amp; response details.</p>
 <h2 id="unack-all-alarms">Unack all alarms</h2>
 <p>Unacknowledge all the alarms of an org.</p>
 <pre><code>POST /api/v1/orgs/:org_id/alarms/unack_all
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#unack-all-alarms">Site:Unack all alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#unack-all-alarms">Site:Unack all alarms</a> for API request &amp; response details.</p>
 <h2 id="get-alarms">Get Alarms</h2>
 <p>List or Search alarms within an org.</p>
 <pre><code>GET /api/v1/orgs/:org_id/alarms/search
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#get-alarms">Site:Get Alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#get-alarms">Site:Get Alarms</a> for API request &amp; response details.</p>
 <h2 id="count-alarms">Count Alarms</h2>
 <p>Count alarms within an org.</p>
 <pre><code>GET /api/v1/orgs/:org_id/alarms/count
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#count-alarms">Site:Count Alarms</a> for API request &amp; response details.</p>
+<p>see <a href="https://www.ketil.dk/3.html#count-alarms">Site:Count Alarms</a> for API request &amp; response details.</p>
 <h1 id="mist-edge">Mist Edge</h1>
 <h2 id="overview_2">Overview</h2>
 <p>Mist Edge is a software component outside of Mist Cloud. Stay tuned for what it can do.</p>
@@ -11002,7 +11002,7 @@ GET /api/v1/orgs/:org_id/ocdevices/outbound_ssh_cmd?site_id=02ce013c-7f98-4afb-a
 </code></pre>
 <h2 id="create-org-blacklist-client-list">Create Org Blacklist Client List</h2>
 <p>If there is already a blacklist, this API will replace it with the new one. Max number of blacklist clients is 1000.</p>
-<p>Retrieve the current blacklisted clients from ‘blacklist_url’ under <a href="https://api.eu.mist.com/api/v1/docs/Org#org-setting">Org:Setting</a></p>
+<p>Retrieve the current blacklisted clients from ‘blacklist_url’ under <a href="https://www.ketil.dk/4.html#org-setting">Org:Setting</a></p>
 <pre><code>POST /api/v1/orgs/:org_id/setting/blacklist
 </code></pre>
 <h3 id="example_13">Example</h3>
@@ -11499,7 +11499,7 @@ GET /api/v1/orgs/:org_id/ocdevices/outbound_ssh_cmd?site_id=02ce013c-7f98-4afb-a
 }
 </code></pre>
 <h3 id="parameters_39">Parameters</h3>
-<p>Same as one defined in <a href="https://api.eu.mist.com/api/v1/docs/Site#upgrade-multiple-device">Site API</a></p>
+<p>Same as one defined in <a href="https://www.ketil.dk/3.html#upgrade-multiple-device">Site API</a></p>
 <h3 id="response_112">Response</h3>
 <pre><code>{
    "id": "f57096b9-0c2f-4df6-c77b-ae6ae87a3d43"
@@ -11553,7 +11553,7 @@ GET /api/v1/orgs/:org_id/ocdevices/outbound_ssh_cmd?site_id=02ce013c-7f98-4afb-a
 }
 </code></pre>
 <h3 id="definitions_20">Definitions</h3>
-<p>Same as one defined in <a href="https://api.eu.mist.com/api/v1/docs/Site#get-site-upgrade">Site API</a></p>
+<p>Same as one defined in <a href="https://www.ketil.dk/3.html#get-site-upgrade">Site API</a></p>
 <h2 id="get-org-upgrades">Get Org Upgrades</h2>
 <pre><code>GET /api/v1/orgs/:org_id/devices/upgrade
 </code></pre>
@@ -11997,7 +11997,7 @@ CLI comands. Allowing you to
 <p>This gets all devices purchased from the accounts associated with the Org</p>
 <pre><code>GET /api/v1/orgs/:org_id/jsi/inventory?limit=100&amp;model=EX2300&amp;serial=DGCOO0015
 </code></pre>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Org#get-juniper-linked-accounts">Get Juniper Linked Accounts</a></p>
+<p>see <a href="https://www.ketil.dk/4.html#get-juniper-linked-accounts">Get Juniper Linked Accounts</a></p>
 <h3 id="response-if-no-juniper-account-linked">Response if no Juniper Account Linked</h3>
 <pre><code>Status 400
 
@@ -12169,7 +12169,7 @@ CLI comands. Allowing you to
 }
 </code></pre>
 <h2 id="troubleshoot">Troubleshoot</h2>
-<p>Troubleshoot sites, devices, clients, and wired clients. See <a href="https://api.eu.mist.com/api/v1/docs/Org#search">search APIs</a> for device information.</p>
+<p>Troubleshoot sites, devices, clients, and wired clients. See <a href="https://www.ketil.dk/4.html#search">search APIs</a> for device information.</p>
 <pre><code>GET /api/v1/orgs/:org_id/troubleshoot?mac=:mac&amp;site_id=4ac1dcf4-9d8b-7211-65c4-057819f0862b&amp;start=1655065456&amp;end=1655151856
 </code></pre>
 <h3 id="parameters_40">Parameters</h3>

@@ -915,7 +915,7 @@ site contains a set of Maps, Wlans, Policies, Zones.</p>
 }
 </code></pre>
 <p><em>N.B</em> portal_template will be forked out of wlan objects soon. To fetch portal_template, please query
-portal_template_url. To update portal_template, use <a href="https://api.eu.mist.com/api/v1/docs/Site#wlan-portal-template">Wlan Portal Template</a>.</p>
+portal_template_url. To update portal_template, use <a href="https://www.ketil.dk/3.html#wlan-portal-template">Wlan Portal Template</a>.</p>
 <h3 id="parameters">Parameters</h3>
 <table>
 <thead>
@@ -1287,7 +1287,7 @@ Server). Very frequent messages can affect the performance of the radius
 <tr>
 <td><code>use_mxedge</code></td>
 <td><code>string</code></td>
-<td>mxedge can be used as radsecproxy, see <a href="https://api.eu.mist.com/api/v1/docs/Org#mist-edge-cluster">Mist Edge Cluster</a> and <a href="https://api.eu.mist.com/api/v1/docs/Site#site-setting">Site Setting</a></td>
+<td>mxedge can be used as radsecproxy, see <a href="https://www.ketil.dk/4.html#mist-edge-cluster">Mist Edge Cluster</a> and <a href="https://www.ketil.dk/3.html#site-setting">Site Setting</a></td>
 </tr>
 <tr>
 <td><code>dns_server_rewrite</code></td>
@@ -1665,7 +1665,7 @@ define at least one basic rate, it will use no-legacy default values</td>
 <tr>
 <td><code>apps</code></td>
 <td><code>object</code></td>
-<td>map from app key to bandwidth in kbps. app key defined in <a href="https://api.eu.mist.com/api/v1/docs/Site#get-application-list">Get Application List</a></td>
+<td>map from app key to bandwidth in kbps. app key defined in <a href="https://www.ketil.dk/3.html#get-application-list">Get Application List</a></td>
 </tr>
 <tr>
 <td><code>wxtag_ids</code></td>
@@ -2884,7 +2884,7 @@ deprecated</p>
 </tbody>
 </table>
 <p><code>authLabel</code>|<code>string</code>|”Connect to WiFi with”
-<code>sponsorEmailTemplate</code>|<code>string</code>|html template to replace/override default sponsor email template; See <a href="https://api.eu.mist.com/api/v1/docs/Site#sponsor-email-template">Sponsor Email Template</a> for more details</p>
+<code>sponsorEmailTemplate</code>|<code>string</code>|html template to replace/override default sponsor email template; See <a href="https://www.ketil.dk/3.html#sponsor-email-template">Sponsor Email Template</a> for more details</p>
 <h4 id="sponsor-email-template">Sponsor Email Template</h4>
 <p>Sponsor Email Template supports following template variables:</p>
 <table>
@@ -6723,7 +6723,7 @@ This API can be used to retrieve the temporary password.</p>
 }
 </code></pre>
 <h2 id="get-config-cli-commands">Get Config CLI Commands</h2>
-<p>For a brown-field switch deployment where we adopted the switch through <a href="https://api.eu.mist.com/api/v1/docs/Org#get-adoption-command">Adoption Command</a>, we
+<p>For a brown-field switch deployment where we adopted the switch through <a href="https://www.ketil.dk/4.html#get-adoption-command">Adoption Command</a>, we
 do not wipe out / overwrite the existing config automatically. Instead, we generate CLI commands that we would have
 generated. The user can inspect, modify, and incorporate this into their existing config manually.</p>
 <p>Once they feel comfortable about the config we generate, they can enable <code>allow_mist_config</code> where we will take full
@@ -7011,10 +7011,10 @@ factory-default config</p>
 
 </code></pre>
 <h3 id="networks">Networks</h3>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Org#networks">Networks</a></p>
+<p>see <a href="https://www.ketil.dk/4.html#networks">Networks</a></p>
 <p><code>networks</code> can be configured directly in Gateway Config directly for smaller deployemnt (e.g. Home, Testing)</p>
 <h3 id="services">Services</h3>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Org#services">Services</a></p>
+<p>see <a href="https://www.ketil.dk/4.html#services">Services</a></p>
 <p><code>services</code> can also be configured directly in Gateway Config directly for smaller deployemnt (e.g. Home, Testing)</p>
 <h3 id="spec">Spec</h3>
 <pre><code>{
@@ -9720,7 +9720,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <tr>
 <td><code>blocked_apps</code></td>
 <td><code>string</code></td>
-<td>blocked apps (always blocking, ignoring <code>action</code>), the key of <a href="https://api.eu.mist.com/api/v1/docs/Site#get-application-list">Get Application List</a></td>
+<td>blocked apps (always blocking, ignoring <code>action</code>), the key of <a href="https://www.ketil.dk/3.html#get-application-list">Get Application List</a></td>
 </tr>
 <tr>
 <td><code>action</code></td>
@@ -9791,7 +9791,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#get-update-delete-network">Org:Networks:Get:Example</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#get-update-delete-network">Org:Networks:Get:Example</a></p>
 <h1 id="get-derived-services-for-site">Get derived Services for site</h1>
 <p>Retrieves the list of Services available for the Site</p>
 <pre><code>GET /api/v1/site/:site_id/services/derived
@@ -9817,7 +9817,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_1">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#services">Org:Services:Example</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#services">Org:Services:Example</a></p>
 <h1 id="get-derived-vpn-for-site">Get derived VPN for Site</h1>
 <p>VPN object represents an overlay network where gateways can participate in and optionally expose routes to.</p>
 <pre><code>GET /api/v1/site/:site_id/vpns/derived
@@ -9843,7 +9843,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_2">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#vpn">Org:VPN:Payload</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#vpn">Org:VPN:Payload</a></p>
 <h1 id="get-derived-service-policies-for-site">Get derived Service Policies for Site</h1>
 <pre><code>GET /api/v1/site/:site_id/servicepolicies/derived
 </code></pre>
@@ -9868,7 +9868,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_3">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#service-policies">Org:Service Policies:Payload</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#service-policies">Org:Service Policies:Payload</a></p>
 <h1 id="get-derived-device-profiles-for-site">Get derived Device Profiles for Site</h1>
 <pre><code>GET /api/v1/site/:site_id/deviceprofiles/derived
 </code></pre>
@@ -9893,7 +9893,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 <pre><code>Status: 200 OK
 </code></pre>
 <h4 id="body_4">Body</h4>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#device-profile">Org:Device Profile:Schema</a></p>
+<p>See <a href="https://www.ketil.dk/4.html#device-profile">Org:Device Profile:Schema</a></p>
 <h2 id="get-wxlan-rule-usage">Get Wxlan Rule usage</h2>
 <pre><code>GET /api/v1/sites/:site_id/stats/wxrules
 </code></pre>
@@ -9923,7 +9923,7 @@ radius_group / radius_username / radius_attr / hostname / app / port</td>
 ]
 </code></pre>
 <h2 id="get-wxlan-rule-currently-used-by-a-client">Get Wxlan Rule Currently used by a Client</h2>
-<p>see <a href="https://api.eu.mist.com/api/v1/docs/Site#get-wireless-client-stat-with-more-details">Client Details</a></p>
+<p>see <a href="https://www.ketil.dk/3.html#get-wireless-client-stat-with-more-details">Client Details</a></p>
 <pre><code>GET /api/v1/sites/:site_id/stats/clients/:client_mac
 </code></pre>
 <h2 id="wxlan-tunnels">WXLAN Tunnels</h2>
@@ -11207,7 +11207,7 @@ where the AP device drops the outer vlan tag (QinQ). This mode is useful
 <tr>
 <td><code>ble_config</code></td>
 <td><code>object</code></td>
-<td>BLE config (see <a href="https://api.eu.mist.com/api/v1/docs/Site#ble">Site:BLE Config</a>)</td>
+<td>BLE config (see <a href="https://www.ketil.dk/3.html#ble">Site:BLE Config</a>)</td>
 </tr>
 <tr>
 <td><code>ble</code></td>
@@ -11357,7 +11357,7 @@ serial number, battery %, temperature, humidity)</td>
 <tr>
 <td><code>ssh_keys</code></td>
 <td><code>list</code></td>
-<td>when <code>limit_ssh_access</code> = true in Org Setting, list of SSH public keys provided by Mist Support to install onto APs (see <a href="https://api.eu.mist.com/api/v1/docs/Org#setting">Org:Setting</a>)</td>
+<td>when <code>limit_ssh_access</code> = true in Org Setting, list of SSH public keys provided by Mist Support to install onto APs (see <a href="https://www.ketil.dk/4.html#setting">Org:Setting</a>)</td>
 </tr>
 <tr>
 <td><code>track_anonymous_devices</code></td>
@@ -12127,7 +12127,7 @@ them to use same setting by matching name/model/role.</p>
 </table>
 <h2 id="create-site-whitelistblacklist-client-list">Create Site Whitelist/Blacklist Client List</h2>
 <p>This endpoint is to provide list of client macs for annotation as whitelist, blacklist or watched station.</p>
-<p>Retrieve the current clients list from ‘whitelist_url’, blacklist_url, or watched_station_url under <a href="https://api.eu.mist.com/api/v1/docs/Site#site-setting">Site:Setting</a></p>
+<p>Retrieve the current clients list from ‘whitelist_url’, blacklist_url, or watched_station_url under <a href="https://www.ketil.dk/3.html#site-setting">Site:Setting</a></p>
 <pre><code>POST /api/v1/sites/:site_id/setting/blacklist
 POST /api/v1/sites/:site_id/setting/whitelist
 POST /api/v1/sites/:site_id/setting/watched_station
@@ -14943,7 +14943,7 @@ X-Mist-Signature: ce3af7760f1289d02bf6a7ad19f3214c4e5c7c2e
 }
 </code></pre>
 <h3 id="device-stat-definition">Device Stat Definition</h3>
-<p>Also see <a href="https://api.eu.mist.com/api/v1/docs/Site#device-config">Device Config</a></p>
+<p>Also see <a href="https://www.ketil.dk/3.html#device-config">Device Config</a></p>
 <table>
 <thead>
 <tr>
@@ -21612,7 +21612,7 @@ Port specific value overrides top level value when both exist.</td>
 <li>AP can decide to use site settings or to override it</li>
 <li>when AP overrides it, this AP will use its own settings, which completely shadows the site setting.</li>
 </ul>
-<p>Each AP derives their radio config from <a href="https://api.eu.mist.com/api/v1/docs/Site#site-setting">Site Settings</a> if there’s no <a href="https://api.eu.mist.com/api/v1/docs/Site#device">overwrite</a> on a
+<p>Each AP derives their radio config from <a href="https://www.ketil.dk/3.html#site-setting">Site Settings</a> if there’s no <a href="https://www.ketil.dk/3.html#device">overwrite</a> on a
 band.</p>
 <h2 id="get-current-channel-planning">Get Current Channel Planning</h2>
 <pre><code>GET /api/v1/sites/:site_id/rrm/current
@@ -22345,7 +22345,7 @@ honored.</p>
     }
 ]
 </code></pre>
-<p>See <a href="https://api.eu.mist.com/api/v1/docs/Org#get-mist-edge-stats">Org:Mxedge</a> for fields description</p>
+<p>See <a href="https://www.ketil.dk/4.html#get-mist-edge-stats">Org:Mxedge</a> for fields description</p>
 <h2 id="get-one-site-mxedges-stats">Get One Site MxEdges Stats</h2>
 <pre><code>Get /api/vi/sites/:site_id/stats/mxedges/:mxedge_id
 </code></pre>
