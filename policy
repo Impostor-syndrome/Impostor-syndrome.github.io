@@ -1,0 +1,17 @@
+Privacy Policy
+
+Effective: 27 September 2026
+
+Hermbro uses Google OAuth to provide Google Workspace functionality through Hermes Agent.
+
+When authorized, Hermbro may access Google Workspace data such as Gmail, Calendar, Drive, Contacts, Sheets, and Docs, depending on the permissions granted by the user.
+
+Google user data is used only to provide functionality explicitly requested by the user. It is not sold, used for advertising, or used to train generalized AI or machine-learning models.
+
+Authentication credentials and OAuth tokens are stored on systems controlled by the operator. Google data may be processed by service providers when necessary to perform a user-requested function.
+
+Users can revoke Google access at any time through their Google Account.
+
+Hermbro's use of information received from Google Workspace APIs adheres to the Google API Services User Data Policy, including its Limited Use requirements.
+
+Contact: contact@ketil.dk
